@@ -1,3 +1,4 @@
+// @ts-nocheck
 sap.ui.define([], function(){
 
     function dateFormat(date){
