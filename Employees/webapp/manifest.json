@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "Northwind.svc": {
-        "uri": "Northwind/V2/Northwind/Northwind.svc/",
+        "uri": "Northwind/v2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
           "odataVersion": "2.0",
@@ -92,12 +92,15 @@
         "dataSource": "YSAPUI5_SRV_01",
         "preload": true,
         "settings": {
+            "defaultUpdateMethod": "PUT",
             "defaultOperationMode": "Server",
             "defaultBindingMode": "TwoWay",
             "defaultCountMode": "Request",
             "refreshAfterChange": false,
-            "usebatch": false,
-            "defaultUpdateMethod": "Put"
+            "useBatch": false,
+            "metadataUrlParams": {
+            "sap-documentation": "heading"
+            }            
         }
       }
     },
