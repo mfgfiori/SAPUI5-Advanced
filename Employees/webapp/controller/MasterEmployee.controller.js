@@ -82,7 +82,13 @@ sap.ui.define([
             var path = oEvent.getSource().getBindingContext("odataNorthwind").getPath();
             this._bus.publish("flexible", "showEmployee", path);
         };
-
+        function toOrderDetails(oEvent){
+            var orderId = oEvent.getSource().getBindingContext("odataNorthwind").getObject().OrderID;
+            var oRoute = sap.ui.core.UIComponent.getRouterFor(this);
+            oRoute.navTo("RouteOrderDetails",{
+                 OrderId: orderId
+            });            
+        };
         const Main = Controller.extend("logaligroup.Employees.controller.MasterEmployee", {});
 
         Main.prototype.onValidate = function () {
@@ -108,5 +114,6 @@ sap.ui.define([
         Main.prototype.showOrders = showOrders;
         Main.prototype.onCloseOrder = onCloseOrder;
         Main.prototype.showEmployee = showEmployee;
+        Main.prototype.toOrderDetails = toOrderDetails;
         return Main;
     });
