@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="true"?>
+
+<edmx:Edmx Version="1.0" xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+
+
+-<edmx:DataServices m:DataServiceVersion="2.0">
+
+
+-<Schema xml:lang="en" sap:schema-version="1" Namespace="YSAPUI5_SRV_01" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+
+
+-<EntityType sap:content-version="1" Name="ZGW_INCIDENTS">
+
+
+-<Key>
+
+<PropertyRef Name="IncidenceId"/>
+
+<PropertyRef Name="SapId"/>
+
+<PropertyRef Name="EmployeeId"/>
+
+</Key>
+
+<Property Name="IncidenceId" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Counter" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+
+<Property Name="SapId" sap:sortable="false" sap:updatable="false" sap:label="SapId" sap:unicode="false" MaxLength="40" Nullable="false" Type="Edm.String"/>
+
+<Property Name="EmployeeId" sap:sortable="false" sap:updatable="false" sap:label="Dummy" sap:unicode="false" MaxLength="3" Nullable="false" Type="Edm.String"/>
+
+<Property Name="CreationDate" sap:sortable="false" sap:updatable="false" sap:label="Date" sap:unicode="false" Type="Edm.DateTime" Precision="7"/>
+
+<Property Name="CreationDateX" sap:sortable="false" sap:updatable="false" sap:label="DateX" sap:unicode="false" Type="Edm.Boolean" sap:filterable="false"/>
+
+<Property Name="Type" sap:sortable="false" sap:updatable="false" sap:label="Version Number Component" sap:unicode="false" MaxLength="2" Type="Edm.String"/>
+
+<Property Name="TypeX" sap:sortable="false" sap:updatable="false" sap:label="TypeX" sap:unicode="false" Type="Edm.Boolean" sap:filterable="false"/>
+
+<Property Name="Reason" sap:sortable="false" sap:updatable="false" sap:label="Text" sap:unicode="false" MaxLength="200" Type="Edm.String"/>
+
+<Property Name="ReasonX" sap:sortable="false" sap:updatable="false" sap:label="ResonX" sap:unicode="false" Type="Edm.Boolean" sap:filterable="false"/>
+
+</EntityType>
+
+
+-<EntityContainer Name="YSAPUI5_SRV_01_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+
+<EntitySet sap:content-version="1" Name="IncidentsSet" sap:pageable="false" EntityType="YSAPUI5_SRV_01.ZGW_INCIDENTS"/>
+
+</EntityContainer>
+
+<atom:link href="http://erp13.sap4practice.com:9037/sap/opu/odata/sap/YSAPUI5_SRV_01/$metadata" rel="self" xmlns:atom="http://www.w3.org/2005/Atom"/>
+
+<atom:link href="http://erp13.sap4practice.com:9037/sap/opu/odata/sap/YSAPUI5_SRV_01/$metadata" rel="latest-version" xmlns:atom="http://www.w3.org/2005/Atom"/>
+
+</Schema>
+
+</edmx:DataServices>
+
+</edmx:Edmx>
